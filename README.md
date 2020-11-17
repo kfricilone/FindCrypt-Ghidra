@@ -52,27 +52,6 @@ There's a total of **122 detectable constants** in the database, related to:
 
 To include more constants of your choice, simply refer to the "FCExporter" project and perhaps also share your new entries :)
 
-#### Database Updating
-
-The script is now using an internal auto update system synchronized with the latest database version in this repository.
-The centralized repository synchronization is by default turned on, this is to ensure the user always has the latest version possible
-and therefore obtain best results from the script, if you wish to turn it off:
-
-1. Open the "FindCrypt.java" file and find the '__FORCE_NO_DBUPDATE' variable (line 705).
-2. Replace "false" with "true".
-
-#### Script Updating
-
-While the database is by design modular and can be updated automatically, the script can not; but the script will check the current version and prompt the user to check this repository latest version for download, with the list of changes from the new version.
-
-The script update message is prompt only once per session.
-
-Proceed to download the latest version of "FindCrypt.java" and replace it in Ghidra's script directory.
-
-Also this feature is turned on by default, if you wish to disable it, follow above mentioned steps on '__FORCE_NO_SCRIPTUPDATE' (line 707).
-
-![Example update](https://github.com/d3v1l401/FindCrypt-Ghidra/blob/master/Misc/updDemo.png)
-
 # Credits
 d3vil401 - d3vil401@protonmail.com, d3vil401#7685 (Discord), https://d3vsite.org/
 
