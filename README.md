@@ -10,21 +10,15 @@ I'm trying to move to Ghidra and the very first thing I noticed is how important
 
 **This software is being developed and tested, if you encounter any problem please proceed into the Issues section**
 
-## Installation
+## Building
 
-#### Windows
+Run the following command in a terminal of your choice.
 
-1. Find your Ghidra installation directory (e.g. "E:\Reversing Softwares\ghidra_9.0")
-2. Move "FindCrypt.java" into "Ghidra\Features\BytePatterns\ghidra_scripts"
-3. Move "findcrypt_ghidra" (database directory) into "C:\Users\your user\"
-4. Be sure Ghidra can access the "findcrypt_ghidra" directory both for reading and writing.
+```bash
+gradlew buildExtension
+```
 
-#### Linux
-
-1. Find your Ghidra installation directory (e.g. ~/ghidra)
-2. Move "FindCrypt.java" into "~/ghidra/Features/BytePatterns/ghidra_scripts"
-3. Move "findcrypt_ghidra" (database directory) into ~/ (or $HOME)
-4. Be sure Ghidra can access the "~/findcrypt_ghidra" directory both for reading and writing.
+Upon completion the output will be located in the dist folder.
 
 ## Usage
 
@@ -45,16 +39,16 @@ There's a total of **122 detectable constants** in the database, related to:
 	* Keccak (SHA-3)
 * **Elliptic Curves**
 	* Donna32 (EC25519), Donna64 (EC25519)
-* **Stream ciphers** 
+* **Stream ciphers**
     * Chacha, Salsa, Sosemanuk
 * **Block ciphers**
     * Blowfish, Camellia, DES, TripleDES, RC2, SHARK, Cast, Square, WAKE, Skipjack, HIGHT, Kalyna, LEA, SEED, SCHACAL2, SIMON-64, SIMON-128, TEA/TEAN/XTEA/XXTEA
-* **Hash funcions** 
+* **Hash funcions**
     * Whirlpool, MD2, MD4, MD5, SHA-1, SHA-256, SHA-384, SHA-512, Tiger, RIPEMD160, HAVAL, BLAKE2
 * **AES Family**
-    * AES, RC5/RC6, MARS, Twofish, CAST-256, GOST, SAFER 
-* **Compression** 
-    * ZLib 
+    * AES, RC5/RC6, MARS, Twofish, CAST-256, GOST, SAFER
+* **Compression**
+    * ZLib
 
 To include more constants of your choice, simply refer to the "FCExporter" project and perhaps also share your new entries :)
 
